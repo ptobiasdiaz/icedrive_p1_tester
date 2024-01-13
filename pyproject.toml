@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "icedrive"
+version = "0.0.1"
+authors = [
+  { name="Jose Luis Segura", email="joseluis.segura@uclm.es" },
+  { name="Tobias Diaz", email="tobias.diaz@uclm.es" },
+]
+description = "Implementation of Ice Drive"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent"
+]
+license = "GPL-3.0-only"
+dependencies = [
+    "zeroc-ice>=3.7",
+    "parse>=1.8.2",
+]
+
+[project.optional-dependencies]
+bdd_tests = [
+    "behave"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/UCLM-ESI/icedrive"
