@@ -16,7 +16,7 @@ def before_all(ctx: Context) -> None:
     slice_path = slice_path.absolute().as_posix()
     Ice.loadSlice(slice_path)
     ctx.communicator = Ice.initialize()
-    ctx.adapter = ctx.communicator.createObjectAdapterWithEndpoints("BehaveAdapter", "tcp -t 5000")
+    ctx.adapter = ctx.communicator.createObjectAdapterWithEndpoints("BehaveAdapter", "tcp")
     ctx.adapter.activate()
 
 
